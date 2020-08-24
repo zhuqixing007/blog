@@ -1,15 +1,21 @@
 import React from "react";
-import { Router, Switch, Route} from "react-router-dom"
-import { createBrowserHistory } from "history";
-import Home from "./pages/home";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import Home from "./pages/home/home";
+import Categories from "./pages/categories/categories";
+import Archives from "./pages/archives/archives";
+import Tags from "./pages/tags/tags";
+import About from "./pages/about/about";
 
-const history = createBrowserHistory(); // 创建浏览器历史记录
 function App() {
   return (
       // 这里定义了一个路由，即网站的根目录
-      <Router history={history}>
+      <Router>
         <Switch>
           <Route exact path={"/"} component={Home}/>
+          <Route path={"/categories"} component={Categories}/>
+          <Route path={"/archives"} component={Archives}/>
+          <Route path={"/tags"} component={Tags}/>
+          <Route path={"/about"} component={About}/>
         </Switch>
       </Router>
   );
