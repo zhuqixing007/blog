@@ -5,6 +5,7 @@ import Categories from "./pages/categories/categories";
 import Archives from "./pages/archives/archives";
 import Tags from "./pages/tags/tags";
 import About from "./pages/about/about";
+import Admin from "./pages/admin/admin";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path={"/archives"} component={Archives}/>
           <Route path={"/tags"} component={Tags}/>
           <Route path={"/about"} component={About}/>
+          <Route path={"/admin"} component={Admin}/>
         </Switch>
       </Router>
   );

@@ -53,9 +53,9 @@ class Template extends React.Component{
             // div是html中的块级盒子，他会独自占据一行，因此光是下面的代码并没有达到我们要的布局效果
             // 我们还需要配合css实现页面布局，className就是在写css时的类选择器
             <div style={{position: "fixed",
-                         height: this.state.height,
+                         height: this.state.height-2,
                          width: this.state.width,
-                         overflowY: "scroll",
+                         overflowY: "auto",
                          backgroundColor: "rgb(235,235,235)",
                          borderTop: "2px solid black"}}>
                 <Github link={"https://github.com/zhuqixing007"}/>
@@ -71,35 +71,35 @@ class Template extends React.Component{
                                         <li className={"nav-li"}>
                                             <span className={"nav-icon"}><HomeOutlined /></span>
                                             <span className={"nav-text"}>首页</span>
-                                            <span className={"nav-cur"}></span>
+                                            <span className={"nav-cur"} />
                                         </li>
                                     </Link>
                                     <Link style={{textDecoration: "none"}} to={{pathname: "/categories"}}>
                                         <li className={"nav-li"}>
                                             <span className={"nav-icon"}><AppstoreOutlined /></span>
                                             <span className={"nav-text"}>分类</span>
-                                            <span className={"nav-cur"}></span>
+                                            <span className={"nav-cur"} />
                                         </li>
                                     </Link>
                                     <Link style={{textDecoration: "none"}} to={{pathname: "/archives"}}>
                                         <li className={"nav-li"}>
                                             <span className={"nav-icon"}><DatabaseOutlined /></span>
                                             <span className={"nav-text"}>归档</span>
-                                            <span className={"nav-cur"}></span>
+                                            <span className={"nav-cur"} />
                                         </li>
                                     </Link>
                                     <Link style={{textDecoration: "none"}} to={{pathname: "/tags"}}>
                                         <li className={"nav-li"}>
                                             <span className={"nav-icon"}><TagOutlined /></span>
                                             <span className={"nav-text"}>标签</span>
-                                            <span className={"nav-cur"}></span>
+                                            <span className={"nav-cur"} />
                                         </li>
                                     </Link>
                                     <Link style={{textDecoration: "none"}} to={{pathname: "/about"}}>
                                         <li className={"nav-li"}>
                                             <span className={"nav-icon"}><UserOutlined /></span>
                                             <span className={"nav-text"}>关于</span>
-                                            <span className={"nav-cur"}></span>
+                                            <span className={"nav-cur"} />
                                         </li>
                                     </Link>
                                     <li className={"nav-li"}>
@@ -130,9 +130,9 @@ class Template extends React.Component{
 
                             </div>
                             <div className={"music"}>
-                                {/*<iframe title="vincent" frameBorder="no" border="0" marginWidth="0" marginHeight="0"*/}
-                                {/*        width="100%" height="70px"*/}
-                                {/*        src="//music.163.com/outchain/player?type=2&id=3411353&auto=1&height=66" />*/}
+                                <iframe title="vincent" frameBorder="no" marginWidth="0" marginHeight="0"
+                                        width="100%" height="70px"
+                                        src="//music.163.com/outchain/player?type=2&id=3411353&height=66" />
                             </div>
                             <div className={"contact"}>
                                 <div><span><GithubOutlined /></span><span>GitHub</span></div>
@@ -141,7 +141,7 @@ class Template extends React.Component{
                         </div>
                     </div>
                     <div className={"rightBox"} style={{width: 0.8*this.state.width-215}}>
-                        <div className={"content"} style={{minHeight: 0.95*this.state.height}}>
+                        <div className={"content"} style={{minHeight: 0.9*this.state.height}}>
                             {this.props.content}
                         </div>
                         <div className={"footer"}>

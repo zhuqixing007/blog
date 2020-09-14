@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.welcome {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+.login {
+    margin: 60px auto 0;
+    width: 400px;
+}

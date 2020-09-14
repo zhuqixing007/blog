@@ -1,6 +1,7 @@
 # 适合零基础的React博客项目
 这是一个用React做的博客项目，完全适合新手入门，你甚至可以不会html，css，javascript，因为我会在教程中将用到的相关内容做详细讲解，具体到涉及的关键代码本身及扩展内容讲解。
 # 更新说明
-更新地址：`https://zhuqixing007.github.io/categories/A-React%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE/`
+更新地址：
+>https://zhuqixing007.github.io/categories/A-React%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE/
 
 这是一个系列教程，教程编号以A开头命名，第一次做教程，制作水平有待提高，如果大家发现教程有不合理或者错误的地方，或者觉得讲解不到位的地方，请在相关教程下方留言告知，我看到会及时修正的

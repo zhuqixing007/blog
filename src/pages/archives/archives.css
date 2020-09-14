@@ -1,0 +1,69 @@
+.archives {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255,255,255);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+}
+.archives-title {
+    font-size: 16px;
+    margin-left: 10px;
+}
+.post-overview {
+    padding: 40px 50px;
+
+}
+.post-counter {
+    position: relative;
+    border-left: 4px solid rgb(235,235,235);
+}
+.post-counter>span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: -8px;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    background-color: rgb(170,170,170);
+    border-radius: 50%;
+}
+.year {
+    position: relative;
+    height: 120px;
+    border-left: 4px solid rgb(235,235,235);
+}
+.year>span:first-child {
+    position: absolute;
+    top: 50%;
+    left: -7px;
+    display: inline-block;
+    margin-top: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(170,170,170);
+    border-radius: 50%;
+}
+.year>span:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    height: 40px;
+    margin-top: -20px;
+    font-size: 30px;
+    line-height: 40px;
+}
+.article {
+    position: relative;
+    border-left: 4px solid rgb(235,235,235);
+    border-bottom: 1px dashed rgb(204,204,204);
+}
+.article>span:first-child {
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    background-color: rgb(170,170,170);
+    border-radius: 50%;
+}

@@ -1,0 +1,19 @@
+.categories {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255,255,255);
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.15);
+    padding: 35px 50px;
+}
+.title {
+    text-align: center;
+    font-size: 28px;
+}
+.counter {
+    text-align: center;
+    font-size: 16px;
+}
+.article-cate>ul {
+    list-style: circle;
+    font-size: 16px;
+}
