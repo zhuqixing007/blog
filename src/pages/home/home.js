@@ -1,6 +1,7 @@
 import React from "react";
 import Template from "../../template/template";
 import "./home.css"
+import {Link} from "react-router-dom";
 
 class Home extends React.Component{
 
@@ -19,7 +20,11 @@ class Home extends React.Component{
                             <div className={"article-brief"}>
                                 <p>今日总览今天实现了：1. 页面尺寸跟随浏览器窗口大小自适应，2.导航栏标签，3. 站点概览标签。效果图如下 从本教程开始，我不会将完整的代码展示出来，我只会讲解每次改动的代码，如果想要参考完整的代码可以访问这个链接：https://github.com/zhuqixing007/blog 页面尺寸 ...</p>
                             </div>
-                            <div className={"article-more"}><p><span>阅读全文</span></p></div>
+                            <Link style={{textDecoration: "none"}} to={{pathname: "/detail"}}>
+                                <div className={"article-more"}>
+                                    <p><span>阅读全文</span></p>
+                                </div>
+                            </Link>
                         </li>
                         <li>article2</li>
                     </ul>

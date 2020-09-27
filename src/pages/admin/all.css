@@ -1,0 +1,47 @@
+.content-all {
+    width: 100%;
+    height: 100%;
+}
+.filter, .post-info {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    user-select: none;
+    border-bottom: 1px solid rgb(215,215,215);
+}
+.post-list {
+    width: 100%;
+}
+.filter-item, .post-info-item{
+    display: inline-block;
+    margin: 0 10px;
+}
+.post-table {
+    width: 100%;
+    text-align: center;
+}
+.table-head {
+    height: 30px;
+    font-size: 16px;
+}
+.table-head>th {
+    border: 1px solid rgb(230,230,230);
+}
+.table-item {
+    font-size: 15px;
+}
+.post-edit {
+    color: grey;
+}
+.post-edit:hover {
+    cursor: pointer;
+    color: #1890ff;
+}
+.post-del {
+    color: grey;
+    margin-left: 10px;
+}
+.post-del:hover {
+    cursor: pointer;
+    color: red;
+}
