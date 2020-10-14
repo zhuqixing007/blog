@@ -24,12 +24,12 @@ function App() {
                   <Route path={"/archives"} component={Archives}/>
                   <Route path={"/tags"} component={Tags}/>
                   <Route path={"/about"} component={About}/>
-                  <Route exact path={"/admin"} component={Admin}/>
-                  <Route path={"/admin/all"} component={All}/>
-                  <Route path={"/admin/new"} component={New}/>
-                  <Route path={"/admin/editor"} component={New}/>
-                  <Route path={"/admin/upload"} component={Upload}/>
                   <Route path={"/detail"} component={Detail}/>
+                  <Route exact path={"/admin"} component={Admin}/>
+                  <Route exact path={"/admin/all"} component={All}/>
+                  <Route exact path={"/admin/new"} component={New}/>
+                  <Route exact path={"/admin/editor"} component={New}/>
+                  <Route exact path={"/admin/upload"} component={Upload}/>
               </Switch>
           </Router>
       </Provider>

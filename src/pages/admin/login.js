@@ -5,6 +5,7 @@ import "./login.css"
 import 'antd/dist/antd.css';
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
+import {Link} from "react-router-dom";
 
 function login() {
     return {type: "LOGIN"};
@@ -21,11 +22,14 @@ class Login extends React.Component{
         super(props);
         this.formRef = React.createRef();
     }
-    handelLogin() {
+    handelLogin(e) {
         const formValues = this.formRef.current.getFieldValue();
         const password = formValues["password"];
         if(password){
             this.props.login();
+        }
+        else {
+            e.preventDefault();
         }
     }
 
@@ -45,10 +49,13 @@ class Login extends React.Component{
                                 iconRender={visible => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}/>
                         </Form.Item>
                         <Form.Item style={{textAlign: "center"}}>
-                            <Button style={{width: 150, height: 40}}
-                                    type={"primary"}
-                                    htmlType={"submit"}
-                                    onClick={() => this.handelLogin()}>登录</Button>
+                            <Link to={{pathname: "/admin/all"}}>
+                                <Button style={{width: 150, height: 40}}
+                                        type={"primary"}
+                                        htmlType={"submit"}
+                                        onClick={(e) => this.handelLogin(e)}>登录</Button>
+                            </Link>
+
                         </Form.Item>
                     </Form>
                 </div>

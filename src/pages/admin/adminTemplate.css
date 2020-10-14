@@ -10,12 +10,46 @@
     color: #1890ff;
 }
 
-.logo {
-    height: 32px;
-    background: rgba(255, 255, 255, 0.2);
-    margin: 16px;
-}
-
 .site-layout .site-layout-background {
     background: #fff;
+}
+.user {
+    position: relative;
+    height: 65px;
+    width: auto;
+    padding: 10px;
+}
+.user-icon {
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    transform: translateX(0);
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    margin-top: -20px;
+    background: cadetblue;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.loginBtn {
+    display: inline-block;
+    position: absolute;
+    height: 30px;
+    width: 55px;
+    right: 10px;
+    top: 50%;
+    margin-top: -15px;
+    background-color: #2f435e;
+    color: #f2f2f2;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+.loginBtn:hover {
+    background-color: #385f9e;
 }

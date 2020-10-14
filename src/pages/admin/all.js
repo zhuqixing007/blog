@@ -4,6 +4,8 @@ import {EditOutlined, DeleteOutlined} from "@ant-design/icons";
 import "./all.css"
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
+import AdminTemplate from "./adminTemplate";
+import {Link} from "react-router-dom";
 
 function get(articles) {
     return {
@@ -20,6 +22,7 @@ function del(article) {
 function mapStateToProps(state){
     return {
         articles: state.articles.articles,
+        windowSize: state.windowSize,
     }
 }
 function mapDispatchToProps(dispatch) {
@@ -29,7 +32,7 @@ function mapDispatchToProps(dispatch) {
 class All extends React.Component{
     render() {
         const {articles, del}= this.props;
-        return (
+        const content = (
             <div className={"content-all"}>
                 <div className={"filter"}>
                     <div className={"filter-item"}>
@@ -69,7 +72,7 @@ class All extends React.Component{
                         <Input.Search placeholder={"输入关键词直接搜索"} style={{ width: 200 }}/>
                     </div>
                 </div>
-                <div className={"post-list"} style={{height: this.props.height-135}}>
+                <div className={"post-list"} style={{height: this.props.windowSize.height-135}}>
                     <table className={"post-table"}>
                         <thead>
                         <tr className={"table-head"}>
@@ -87,12 +90,14 @@ class All extends React.Component{
                                     <tr className={"table-item"} key={article.id}>
                                         <td>{article.title}</td>
                                         <td>{article.date.year+"-"+article.date.month+"-"+
-                                             article.date.date+" "+article.date.hour+":"+
-                                             article.date.min}</td>
+                                        article.date.date+" "+article.date.hour+":"+
+                                        article.date.min}</td>
                                         <td>{article.categories.join(",")}</td>
                                         <td>{article.tags.join(",")}</td>
                                         <td>
-                                            <span className={"post-edit"}><EditOutlined /></span>
+                                            <Link to={{pathname: "/admin/editor", search: encodeURIComponent(article.id.toString())}}>
+                                                <span className={"post-edit"}><EditOutlined /></span>
+                                            </Link>
                                             <span className={"post-del"} onClick={() => del(article)}><DeleteOutlined /></span>
                                         </td>
                                     </tr>
@@ -103,6 +108,9 @@ class All extends React.Component{
                     </table>
                 </div>
             </div>
+        );
+        return (
+            <AdminTemplate content={content} curPage={"1"}/>
         );
     }
 }

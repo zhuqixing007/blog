@@ -2,54 +2,32 @@ import React from "react";
 import Login from "./login";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
-import AdminTemplate from "./adminTemplate";
 
-function logout() {
-    return { type: "LOGOUT"};
+function windowResize() {
+    return { type: "RESIZE"};
 }
 function mapStateToProps(state) {
     return {
-        loginState: state.login.loginState,
+        windowSize: state.windowSize,
     };
 }
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({logout}, dispatch);
+    return bindActionCreators({windowResize}, dispatch);
 }
 
 class Admin extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            width: window.innerWidth,
-            height: window.innerHeight,
-        };
-    }
     componentDidMount() {
-        window.addEventListener("resize", this.handelResize.bind(this));
+        window.addEventListener("resize", this.props.windowResize);
     }
     componentWillUnmount() {
-        window.removeEventListener("resize", this.handelResize.bind(this));
+        window.removeEventListener("resize", this.props.windowResize);
     }
-    handelResize(){
-        this.setState({
-            width: window.innerWidth,
-            height: window.innerHeight,
-        });
-    }
-
-
     render() {
-        let view;
-        switch (this.props.loginState) {
-            case false: view = <Login />;break;
-            case true: view = <AdminTemplate />;break;
-            default:
-        }
         return (
-            <div style={{width: this.state.width,
-                height: this.state.height,
+            <div style={{width: this.props.windowSize.width,
+                height: this.props.windowSize.height,
                 margin: "0 auto",}}>
-                {view}
+                <Login />
             </div>
         );
     }
