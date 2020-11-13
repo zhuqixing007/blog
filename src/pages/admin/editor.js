@@ -4,7 +4,6 @@ import MdEditor from "react-markdown-editor-lite";
 import MarkdownIt from "markdown-it";
 
 
-
 class Editor extends React.Component{
     constructor(props) {
         super(props);
@@ -100,4 +99,5 @@ class Editor extends React.Component{
         );
     }
 }
+
 export default Editor;
